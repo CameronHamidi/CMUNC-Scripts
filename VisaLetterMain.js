@@ -21,7 +21,7 @@ function myFunction(e)
   var copyDoc = DocumentApp.openById(copyId);
   var copyBody = copyDoc.getActiveSection();
  
-  var individualLowercase = e.values[1].toLowerCase()
+  var individualLowercase = e.values[1].toLowerCase();
   var individualOrNot = e.values[1] == "Individual Delegate";
   var plusSchool = (individualOrNot ? "" : "and the rest of the " + e.values[1] + " delegation ");
   var studentOrAdvisor = (e.values[6] == "Student" ? "Student" : "Advisor");
@@ -47,11 +47,11 @@ function myFunction(e)
   
   
   var body = "Dear " + getFirstName(e.values[2]) + ",";
-  var individualLowercase = e.values[1].toLowerCase()
-  body += "\n\nPlease find your visa letter attached to this email. We look forward to seeing you " + plusSchool + "at CMUNC 2018 this April.";
-  body += "\n\nYours sincerely,\n\nCameron Hamidi\nDirector of Technology\nCornell Model United Nations Conference 2018\nit@cmunc.net";
+  var individualLowercase = e.values[1].toLowerCase();
+  body += "\n\nPlease find your visa letter attached to this email. We look forward to seeing you " + plusSchool + "at CMUNC " + get_year() " this April.";
+  body += "\n\nYours sincerely,\n\n" + get_name(tech) "\nDirector of Technology\nCornell Model United Nations Conference " + get_year() + "\nit@cmunc.net";
   
-  MailApp.sendEmail(e.values[5], "CMUNC 2018 Visa Letter", body, {name : "Cornell Model United Nations Conference", attachments : [newFile]});
+  MailApp.sendEmail(e.values[5], "CMUNC " + get_year() + " Visa Letter", body, {name : "Cornell Model United Nations Conference", attachments : [newFile]});
   
   newFile.setTrashed(true);
   

@@ -31,21 +31,3 @@ function get_assignments_sheet_url(){
   return "https://docs.google.com/spreadsheets/d/13KzQ22e2ZH4fYFM27HIghUOMad7-Z3qvAuVq7FCZrco/"; //REPLACE THIS with the URL of the excel spreadsheet where the Committee Assignments are stored.
   //Omit all characters after and including the "/edit#grid="
 }
-
-
-/*
-Returns the name of the associated secretariat member based on the argument. Current supported arguments are "tech" for the Director of Technology.
-*/
-function get_secretariat(name){
-  if (name == "tech"){
-    return "Cameron Hamidi"; //REPLACE THIS with the name of the current Director of Technology
-  }
-}
-
-
-/*
-Returns the year of the conference
-*/
-function get_year(){
-  return "2018"; //REPLACE THIS with the current CMUNC year (the year of the conference)
-}

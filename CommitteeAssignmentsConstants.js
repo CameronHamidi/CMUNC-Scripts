@@ -1,32 +1,4 @@
 /*
-Returns the name of the secretariat member associated with the name argument. Supported arguments are "tech" and "sg".
-
-name : (String) the position associated with the name you want the function to return
-
-@return : (String) the name of the secretariat member
-*/
-function get_secretariat(name){
-  if (name == "tech"){
-    return "Cameron Hamidi"; //REPLACE THIS with the name of the current Director of Technology
-  }
-  else if (name == "sg"){
-    return "Taylor MacBain"; //REPLACE THIS with the name of the current Secretary_General
-  }
-}
-
-/*
-Similar to get_secretariat, but returns the email address of the secretariat member instead.
-*/
-function get_email(name){
-  if (name == "tech"){
-    return "it@cmunc.net";
-  }
-  else if (name == "sg"){
-    return "sg@cmunc.net";
-  }
-}
-
-/*
 Returns the ID of the assignments sheet
 */
 function get_assignments_sheet_id() {
