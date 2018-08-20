@@ -7,7 +7,7 @@ function transfer() {
   following columns filled out: School, Advisor email, # of Delegates, Delegation Fee, Delegate Fee, Transportation Fee, Online Pay Fee, Total Due, Advisor Name, and Regular (or Late) Transfer? ("Filled out as "Yes").
   The function will update the delegation's information in the spreadsheet, update the delegation's invoice, and email the new invoice to the delegation.
   */
-  var invoiceFolders = DriveApp.getFolderById("0B7yG9MoTc2O3SkhzWjJHeWFmelU");
+  var invoiceFolders = DriveApp.getFolderById(get_invoice_folder_id());
  
   var setting;
   var curr_date = new Date();
@@ -25,7 +25,7 @@ function transfer() {
   
   var date_string = currMonth + "/" + currDay + "/" + curr_date.getFullYear();
   
-  var spreadsheet = SpreadsheetApp.openById("1Q70d85YejOKaTDSPeRaWmh5hJTsLDGqlh6ZND0e7lKY");
+  var spreadsheet = SpreadsheetApp.openById(get_registration_spreadsheet_id());
   SpreadsheetApp.setActiveSpreadsheet(spreadsheet);
   
   var registration_sheet = (setting == "Late") ? spreadsheet.getSheets()[3] : spreadsheet.getSheets()[2];
