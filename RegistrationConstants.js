@@ -39,6 +39,21 @@ function get_template_id(){
 
 
 /*
+Returns the ID of the Invoices folder as a String
+*/
+function get_invoice_folder_id(){
+  return '0B7yG9MoTc2O3SkhzWjJHeWFmelU'; //CHANGE THIS to whatever the ID of the Invoices folder is.
+}
+
+
+/*
+Returns the ID of the Registration spreadsheet as a String
+*/
+function get registration_spreadsheet_id() {
+  return '1Q70d85YejOKaTDSPeRaWmh5hJTsLDGqlh6ZND0e7lKY'; //CHANGE THIS to whatever the ID of the Registration spreadsheet is
+}
+
+/*
 Returns the month (as a number) when the given pricing period begins.
 
 If the period argument is set to "early", returns the month when the early pricing period begins. Likewise, does the same for "regular" and "late" arguments.
