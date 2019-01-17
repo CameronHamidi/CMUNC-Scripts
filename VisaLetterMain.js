@@ -12,7 +12,7 @@ replaced with their appropriate values.
 function myFunction(e)
 {
   // Replace this with ID of your template document.
-  var TEMPLATE_ID = '1SAN2YiLts5-cLhX1Rz8AMwXQdGgl2eVLZbtl1h6AtJ0'; //REPLACE THIS with the ID of the visa letter template. The template should be stored in the drive for the current CMUNC year; do not reuse the CMUNC 2018 visa letter template
+  var TEMPLATE_ID = '15uUklZ19Ifrdc48TWE7i2vDdUyCKuTr4QrnnrrvgL9M'; //REPLACE THIS with the ID of the visa letter template. The template should be stored in the drive for the current CMUNC year; do not reuse the CMUNC 2018 visa letter template
 
   
   // Set up the docs and the spreadsheet access  
@@ -27,7 +27,7 @@ function myFunction(e)
   var studentOrAdvisor = (e.values[6] == "Student" ? "Student" : "Advisor");
   
   var toReplace = ["%firstName%", "%plusSchool%", "%studentOrAdvisor%", "%name%", "%dob%", "%passNumber%"];
-  var replaceWith = [e.values[2], plusSchool, studentOrAdvisor, e.values[2], e.values[3], e.values[4]];
+  var replaceWith = [e.values[2], plusSchool, studentOrAdvisor, e.values[2], e.values[4], e.values[5]];
   
 
   for (var i = 0; i < toReplace.length; i++) {
@@ -49,9 +49,9 @@ function myFunction(e)
   var body = "Dear " + getFirstName(e.values[2]) + ",";
   var individualLowercase = e.values[1].toLowerCase();
   body += "\n\nPlease find your visa letter attached to this email. We look forward to seeing you " + plusSchool + "at CMUNC " + get_year() + " this April.";
-  body += "\n\nYours sincerely,\n\n" + get_name(tech) + "\nDirector of Technology\nCornell Model United Nations Conference " + get_year() + "\nit@cmunc.net";
+  body += "\n\nYours sincerely,\n\n" + get_secretariat("tech") + "\nDirector of Technology\nCornell Model United Nations Conference " + get_year() + "\nit@cmunc.net";
   
-  MailApp.sendEmail(e.values[5], "CMUNC " + get_year() + " Visa Letter", body, {name : "Cornell Model United Nations Conference", attachments : [newFile]});
+  MailApp.sendEmail(e.values[6], "CMUNC " + get_year() + " Visa Letter", body, {name : "Cornell Model United Nations Conference", attachments : [newFile]});
   
   newFile.setTrashed(true);
   
