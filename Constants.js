@@ -7,20 +7,20 @@ name : (String) the secretariat position for which you need the associated name
 */
 function get_secretariat(name){
   if (name.toLocaleLowerCase().indexOf("tech") != -1){
-    return "Cameron Hamidi"; //CHANGE THIS to the current Director of Technology
+    return "Kevin Guo"; //CHANGE THIS to the current Director of Technology
   }
   else if (name.toLocaleLowerCase().indexOf("director") != -1 || name.toLocaleLowerCase().indexOf("dg") != -1){
-    return "Cole Stefan"; //CHANGE THIS to the current Director-General
+    return "Abigail Chen"; //CHANGE THIS to the current Director-General
   }
   else if (name.toLocaleLowerCase().indexOf("secretary") != -1 || name.toLocaleLowerCase().indexOf("sg") != -1){
-    return "Taylor MacBain"; //CHANGE THIS to the current Secretary-General
+    return "Ann Balzer"; //CHANGE THIS to the current Secretary-General
   }
   else if (name.toLocaleLowerCase().indexOf("finance") != -1){
-    return "Tal Moriah"; //CHANGE THIS to the current Director of Finance
+    return "Brendan Dodd"; //CHANGE THIS to the current Director of Finance
   }
   
   else if (name.toLocaleLowerCase().indexOf("outreach") != -1){
-    return "Abigail Chen"; //CHANGE THIS to the current Director of Outreach
+    return "Joanna Hua"; //CHANGE THIS to the current Director of Outreach
   }
 }
 
@@ -29,7 +29,7 @@ function get_secretariat(name){
 Returns the year of the conference as a number
 */
 function get_year(){
-  return 2018;
+  return 2019;
 }
 
 
