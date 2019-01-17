@@ -48,8 +48,8 @@ function myFunction(e)
   
   var body = "Dear " + getFirstName(e.values[2]) + ",";
   var individualLowercase = e.values[1].toLowerCase();
-  body += "\n\nPlease find your visa letter attached to this email. We look forward to seeing you " + plusSchool + "at CMUNC " + get_year() " this April.";
-  body += "\n\nYours sincerely,\n\n" + get_name(tech) "\nDirector of Technology\nCornell Model United Nations Conference " + get_year() + "\nit@cmunc.net";
+  body += "\n\nPlease find your visa letter attached to this email. We look forward to seeing you " + plusSchool + "at CMUNC " + get_year() + " this April.";
+  body += "\n\nYours sincerely,\n\n" + get_name(tech) + "\nDirector of Technology\nCornell Model United Nations Conference " + get_year() + "\nit@cmunc.net";
   
   MailApp.sendEmail(e.values[5], "CMUNC " + get_year() + " Visa Letter", body, {name : "Cornell Model United Nations Conference", attachments : [newFile]});
   
