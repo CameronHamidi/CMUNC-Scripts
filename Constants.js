@@ -18,7 +18,6 @@ function get_secretariat(name){
   else if (name.toLocaleLowerCase().indexOf("finance") != -1){
     return "Brendan Dodd"; //CHANGE THIS to the current Director of Finance
   }
-  
   else if (name.toLocaleLowerCase().indexOf("outreach") != -1){
     return "Joanna Hua"; //CHANGE THIS to the current Director of Outreach
   }
